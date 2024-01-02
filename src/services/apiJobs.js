@@ -14,11 +14,14 @@ export async function getJobs({
     .range(from, to)
     .order("created_at", { ascending: false });
 
-  let { data, error } = await query;
   if (isFullTime) {
+    console.log("full");
     query = query.eq("contrat", "Full Time");
+  } else {
+    console.log("part");
   }
 
+  let { data, error } = await query;
   if (serachTitle.length) {
     data = data.filter(job => {
       const { company, position, level, contact, website } = job;
