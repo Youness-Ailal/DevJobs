@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+@layer components {
+  .element-bg {
+    @apply bg-white dark:bg-foreground2;
+  }
+}
+/* shadcn themes */
+@layer base {
+  :root {
+    --background: 220 88% 97%;
+    --foreground: 235 42% 6%;
+    --card: 220 88% 97%;
+    --card-foreground: 235 42% 6%;
+    --popover: 220 88% 97%;
+    --popover-foreground: 235 42% 6%;
+    --primary: 235 70% 61%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 235 70% 61%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 235 42% 6%;
+    --foreground: 210 40% 98%;
+    --card: 235 42% 6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 235 42% 6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+:root {
+  --brand: #6366f1;
+  --color-background: #f0f3ff;
+  --text1: #020617;
+  --text2: #475569;
+  --text3: #64748b;
+  --text4: #94a3b8;
+  --text5: #cbd5e1;
+  &.dark {
+    --brand: #6366f1;
+    --color-background: #020617;
+    --text1: #020617;
+    --text2: #475569;
+    --text3: #64748b;
+    --text4: #94a3b8;
+    --text5: #cbd5e1;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  /* Creating animations for dark mode */
+  transition: background-color 0.3s, all 0.2s;
+}
+
+html {
+  // font-size: 62.5%;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  transition: color 0.3s, background-color 0.3s;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  // background-color: var(--color-background);
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+select:disabled,
+input:disabled {
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-500);
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: -1px;
+}
+
+button:has(svg) {
+  line-height: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+img {
+  max-width: 100%;
+
+  /* For dark mode */
+  // filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
+}

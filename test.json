@@ -1,0 +1,23 @@
+[
+  {
+    "intro": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus alias dolore ad, labore perferendis reiciendis, repellendus quod, placeat nisi officiis aperiam amet maxime repudiandae quisquam deserunt rerum. Dolorum, illo consequatur? Maiores eius delectus dolorem quo facilis cupiditate dicta, veritatis, nam ut ullam deleniti consectetur, labore expedita. Nulla molestiae nemo sapiente, praesentium officia dolores similique repellat excepturi, nihil, porro ut fugit. Minus ut obcaecati rerum voluptas id sit aspernatur vero reprehenderit voluptatibus! Laudantium ratione quae aspernatur necessitatibus, voluptatem temporibus saepe eveniet sapiente cum eum illo quia doloremque non sunt, vitae ipsam.",
+    "requirements": {
+      "text": "praesentium officia dolores similique repellat excepturi, nihil, porro ut fugit. Minus ut obcaecati rerum voluptas id sit aspernatur vero reprehenderit voluptatibus! Laudantium ratione quae aspernatur necessitatibus",
+      "list": [
+        "3+ years experience with JavaScript",
+        "Knowledge of React framework",
+        "Experience with REST APIs",
+        "Familiarity with Git and unit testing"
+      ]
+    },
+    "whatYouWillDo": {
+      "text": "nihil, porro ut fugit. Minus ut obcaecati rerum voluptas id sit aspernatur vero reprehenderit voluptatibus! Laudantium ratione quae aspernatur necessitatibus, voluptatem temporibus saepe eveniet sapiente cum eum illo quia doloremque non sunt, vitae ipsam",
+      "list": [
+        "Write new React components",
+        "Integrate APIs into application",
+        "Write unit tests for new code",
+        "Participate in code reviews"
+      ]
+    }
+  }
+]
