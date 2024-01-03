@@ -7,16 +7,19 @@ import { PAGE_COUNT } from "../../utils/constants";
 import Empty from "../../components/Empty";
 const StyledList = styled.ul`
   list-style: none;
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   justify-content: start;
   align-items: center;
-  gap: 3rem;
-  row-gap: 5rem; */
-  display: flex;
+  gap: 2rem;
+  row-gap: 5rem;
+  @media (max-width: 454px) {
+    grid-template-columns: 1fr;
+  }
+  /* display: flex;
   flex-wrap: wrap;
   gap: 4rem;
-  row-gap: 6rem;
+  row-gap: 6rem; */
 `;
 
 function JobsList() {

@@ -29,7 +29,7 @@ function Search() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="element-bg w-full rounded-md overflow-hidden grid grid-cols-[1.4fr_1fr_auto] shadow-sm">
+      className="element-bg w-full rounded-md overflow-hidden grid grid-cols-[1.4fr_1fr_auto] shadow-sm max-[863px]:grid-cols-[1fr_1fr] max-[400px]:flex max-[400px]:flex-col">
       <Input
         value={title}
         onChange={e => setTitle(e.target.value)}
@@ -42,7 +42,7 @@ function Search() {
         placeholder="Filter by location">
         <IoLocationSharp className="text-indigo-600" />
       </Input>
-      <div className="flex items-center gap-8 p-4">
+      <div className="flex flex-wrap items-center gap-8 p-4 max-[863px]:col-span-2">
         <div className="flex items-center gap-2 p-3">
           <Checkbox
             checked={isFullTime}

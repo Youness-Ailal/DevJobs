@@ -33,13 +33,12 @@ function JobInfo({ job }) {
   } = job;
   const published = getTimeDifference(new Date(created_at));
   const parsedDescription = JSON.parse(description).at(0);
-  console.log(parsedDescription);
   const { intro, requirements, whatYouWillDo } = parsedDescription;
 
   return (
     <div className="space-y-20 ">
-      <div className="px-12 py-16 element-bg space-y-12 rounded-md">
-        <Div className="flex items-center justify-between">
+      <div className="md:px-12 md:py-16 px-2 py-8 element-bg space-y-12 rounded-md ">
+        <Div className="flex flex-wrap gap-4 items-center justify-between">
           <div className=" space-y-2">
             <div className="flex items-center gap-2 text-md text-slate-500 dark:text-slate-400">
               <p>{published} </p>
@@ -67,7 +66,9 @@ function JobInfo({ job }) {
           <p className="">{requirements.text}</p>
           <ul className="space-y-3 ">
             {requirements.list.map(item => (
-              <DottedLi className="pl-[3rem]">{item}</DottedLi>
+              <DottedLi key={item} className="pl-[3rem]">
+                {item}
+              </DottedLi>
             ))}
           </ul>
         </Div>
@@ -78,7 +79,7 @@ function JobInfo({ job }) {
           <p className="">{whatYouWillDo.text}</p>
           <ul className="space-y-4 ">
             {whatYouWillDo.list.map((item, i) => (
-              <li className="">
+              <li key={item} className="">
                 <span className="pr-[3rem] text-indigo-500 font-semibold">
                   {" "}
                   {i + 1}
@@ -89,7 +90,7 @@ function JobInfo({ job }) {
           </ul>
         </Div>
       </div>
-      <div className="px-8 py-10 element-bg relative flex items-center justify-between ">
+      <div className="md:px-8 md:py-10 py-5 px-2 flex-wrap gap-4 element-bg relative flex items-center justify-between ">
         <div className="space-y-1">
           <h2 className="text-slate-950  dark:text-indigo-50 font-semibold text-3xl">
             {position}

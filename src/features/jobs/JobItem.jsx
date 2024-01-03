@@ -4,14 +4,19 @@ import { getTimeDifference } from "../../utils/helpers";
 import { GrLinkNext } from "react-icons/gr";
 
 const StyledJobCard = styled(Link)`
-  width: 26rem;
+  max-width: 26rem;
   height: 15rem;
   box-shadow: 0 0 0.5rem 0.05rem rgba(0, 0, 0, 0.05);
   padding: 1.6rem;
   padding-bottom: 3rem;
+
   &:hover svg {
     opacity: 1;
     transform: translateX(0rem);
+  }
+  @media (max-width: 454px) {
+    padding: 1rem;
+    padding-bottom: 3rem;
   }
 `;
 
